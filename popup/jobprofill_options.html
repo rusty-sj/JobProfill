@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JobProfill Options</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="options.js"></script>
+</head>
+<body>
+<div>
+    <img class="icon" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);" height="80" width="80"
+         src="../icons/logo.png">
+</div>
+
+<div>
+    <div class="card">
+        <div class="number-circle table-cell">1</div>
+        <div class="table-cell">&nbsp;Fill out the form.</div>
+    </div>
+    
+    <div class="card">
+        <div class="number-circle table-cell">2</div>
+        <div class="table-cell">&nbsp;Use profile:
+            &nbsp;&nbsp;<select class="select-css float-right" id="profiles">
+            </select>
+        </div>
+    </div>
+    <div class="name-card card d-none">
+        <div class="number-circle table-cell">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div class="table-cell"><input type="text" id="profileName">
+            &nbsp;<button class="btn" id="btnOK" type="button">OK</button>&nbsp;&nbsp;
+            <button class="btn" id="btnCancel" type="button">Cancel</button>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="number-circle table-cell">3</div>
+        <div class="table-cell">&nbsp;Save/Update Profile:</div>
+        <div class="table-cell">
+            <button class="btn">Save</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
