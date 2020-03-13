@@ -1,32 +1,40 @@
 {
   "manifest_version": 2,
   "name": "JobProfill",
-  "version": "1.0",
   "description": "Automatically fills the job application portal forms with previous applications' data",
+  "version": "2.0",
+  "author": "Rashmi Jadhav",
+  "homepage_url": "https://github.com/rusty-sj/JobProfill",
   "icons": {
     "16": "icons/jobprofill_logo_x16.png",
     "32": "icons/jobprofill_logo_x32.png",
     "48": "icons/jobprofill_logo_x48.png",
-    "64": "icons/jobprofill_logo_x16.png",
-    "80": "icons/jobprofill_logo_x16.png",
-    "96": "icons/jobprofill_logo_x16.png"
+    "64": "icons/jobprofill_logo_x64.png",
+    "80": "icons/jobprofill_logo_x80.png",
+    "96": "icons/jobprofill_logo_x96.png"
   },
   "permissions": [
+    "activeTab",
     "storage",
-    "tabs",
-    "activeTab"
+    "contextMenus"
   ],
   "browser_action": {
     "default_icon": {
       "16": "icons/jobprofill_logo_x16.png",
       "32": "icons/jobprofill_logo_x32.png",
       "48": "icons/jobprofill_logo_x48.png",
-      "64": "icons/jobprofill_logo_x16.png",
-      "80": "icons/jobprofill_logo_x16.png",
-      "96": "icons/jobprofill_logo_x16.png"
+      "64": "icons/jobprofill_logo_x64.png",
+      "80": "icons/jobprofill_logo_x80.png",
+      "96": "icons/jobprofill_logo_x96.png"
     },
     "default_title": "JobProfill",
     "default_popup": "popup/jobprofill_options.html"
+  },
+  "applications": {
+    "gecko": {
+      "id": "{69736e7e-030c-4268-a754-bd7628bd679e}",
+      "strict_min_version": "42.0"
+    }
   },
   "content_scripts": [
     {
@@ -34,8 +42,15 @@
         "<all_urls>"
       ],
       "js": [
-        "autofill.js"
+        "popup/jquery-3.4.1.min.js",
+        "popup/options.js"
       ]
     }
-  ]
+  ],
+  "background": {
+    "scripts": [
+      "popup/jquery-3.4.1.min.js",
+      "popup/options.js"
+    ]
+  }
 }

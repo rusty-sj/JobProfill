@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>JobProfill Options</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="jquery-3.4.1.min.js"></script>
-    <script src="options.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="options.js"></script>
 </head>
 <body>
 <div>
@@ -27,7 +28,7 @@
         </div>
     </div>
     <div class="name-card card d-none">
-        <div class="number-circle table-cell">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div class="number-circle table-cell">&nbsp;&nbsp;</div>
         <div class="table-cell"><input type="text" id="profileName">
             &nbsp;<button class="btn" id="btnOK" type="button">OK</button>&nbsp;&nbsp;
             <button class="btn" id="btnCancel" type="button">Cancel</button>
@@ -38,8 +39,13 @@
         <div class="number-circle table-cell">3</div>
         <div class="table-cell">&nbsp;Save/Update Profile:</div>
         <div class="table-cell">
-            <button class="btn">Save</button>
+            <button id="saveProfile" class="btn">Save</button>
         </div>
+    </div>
+    
+    <div class="card d-none" id="saveSuccess">
+        <div class="table-cell">Profile saved successfully.</div>
+        <div class="table-cell"><div class="check"></div></div>
     </div>
 </div>
 
