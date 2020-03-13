@@ -112,6 +112,13 @@ var first_name = "#first_name",
     start_year = "div.education:nth-child(1) > fieldset:nth-child(2) > div:nth-child(4) > fieldset:nth-child(1) > input:nth-child(3)",
     end_month = "div.education:nth-child(1) > fieldset:nth-child(2) > div:nth-child(5) > fieldset:nth-child(1) > input:nth-child(2)",
     end_year = "div.education:nth-child(1) > fieldset:nth-child(2) > div:nth-child(5) > fieldset:nth-child(1) > input:nth-child(3)",
+    school1 = "#s2id_education_school_name_1 > a:nth-child(1) > span:nth-child(1)",
+    degree1 = "#s2id_education_degree_1 > a:nth-child(1) > span:nth-child(1)",
+    discipline1 = "#s2id_education_discipline_1 > a:nth-child(1) > span:nth-child(1)",
+    start_month1 = "#education_section > div:nth-child(2) > fieldset:nth-child(2) > div:nth-child(4) > fieldset:nth-child(1) > input:nth-child(2)",
+    start_year1 = "#education_section > div:nth-child(2) > fieldset:nth-child(2) > div:nth-child(4) > fieldset:nth-child(1) > input:nth-child(3)",
+    end_month1 = "#education_section > div:nth-child(2) > fieldset:nth-child(2) > div:nth-child(5) > fieldset:nth-child(1) > input:nth-child(2)",
+    end_year1 = "#education_section > div:nth-child(2) > fieldset:nth-child(2) > div:nth-child(5) > fieldset:nth-child(1) > input:nth-child(3)",
     linkedIn = "#job_application_answers_attributes_1_text_value",
     portfolio = "#job_application_answers_attributes_0_text_value";
 
@@ -140,6 +147,20 @@ if ($(end_month).val())
     userProfile['end_month'] = $(end_month).val();
 if ($(end_year).val())
     userProfile['end_year'] = $(end_year).val();
+if ($(school1).text())
+    userProfile['school1'] = $(school1).text();
+if ($(degree1).text())
+    userProfile['degree1'] = $(degree1).text();
+if ($(discipline1).text())
+    userProfile['discipline1'] = $(discipline1).text();
+if ($(start_month1).val())
+    userProfile['start_month1'] = $(start_month1).val();
+if ($(start_year1).val())
+    userProfile['start_year1'] = $(start_year1).val();
+if ($(end_month1).val())
+    userProfile['end_month1'] = $(end_month1).val();
+if ($(end_year1).val())
+    userProfile['end_year1'] = $(end_year1).val();
 if ($(linkedIn).val())
     userProfile['linkedIn'] = $(linkedIn).val();
 if ($(portfolio).val())
